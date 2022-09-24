@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function Selection(props) {
-  let [style, setStyle] = useState({ background: "" });
-
-  let applyColor = props.applyColor;
-
+const ColourSelector = (props) => {
+  const { config, selectNextBackground } = props;
+  const { background } = config;
   return (
-    <div className="fix-box" onClick={() => applyColor(setStyle)} style={style}>
-      <h2 className="subheading">Selection</h2>
-    </div>
+    <button
+      className={config.classname}
+      onClick={() => selectNextBackground({ background: background })}
+    >
+      {config.label}
+    </button>
   );
-}
+};
+export default ColourSelector;
