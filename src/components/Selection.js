@@ -6,10 +6,9 @@ function Selection(props) {
   let applyColor = props.applyColor;
 
   return (
-    <div className="fix-box">
+    <div className="fix-box" onClick={() => applyColor(setStyle)} style={style}>
       <h2 className="subheading">Selection</h2>
     </div>
   );
 }
 export default Selection;
-
