@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Selection(props) {
+export default function Selection(props) {
   let [style, setStyle] = useState({ background: "" });
 
   let applyColor = props.applyColor;
@@ -11,4 +11,3 @@ function Selection(props) {
     </div>
   );
 }
-export default Selection;
